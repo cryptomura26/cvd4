@@ -17,14 +17,14 @@
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
   :root {
-    --bg:         #0a0b0d;
-    --bg2:        #0f1114;
-    --bg3:        #161a1f;
-    --border:     #1e2328;
-    --border2:    #252b33;
-    --text:       #c8d0db;
-    --text2:      #6b7685;
-    --text3:      #3d4550;
+    --bg:         #f5f7fb;
+    --bg2:        #ffffff;
+    --bg3:        #eef2f7;
+    --border:     #d9e1ec;
+    --border2:    #c8d3e1;
+    --text:       #18212b;
+    --text2:      #5f6b7a;
+    --text3:      #8d98a8;
     --green:      #26a69a;
     --red:        #ef5350;
     --green-dim:  #26a69a33;
@@ -35,8 +35,21 @@
     --font-sans:  'IBM Plex Sans', sans-serif;
   }
 
-  html, body { height: 100%; background: var(--bg); color: var(--text); font-family: var(--font-sans); overflow: hidden; }
-  .app { display: grid; grid-template-rows: 44px 1fr; height: 100vh; }
+  html, body {
+    height: 100%;
+    background:
+      radial-gradient(circle at top, rgba(74, 158, 255, 0.10), transparent 28%),
+      linear-gradient(180deg, #ffffff 0%, var(--bg) 42%, #edf2f8 100%);
+    color: var(--text);
+    font-family: var(--font-sans);
+    overflow: hidden;
+  }
+  .app {
+    display: grid;
+    grid-template-rows: 44px 1fr;
+    height: 100vh;
+    background: transparent;
+  }
 
   /* ── TOPBAR ── */
   .topbar {
